@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        jdk 'JAVA_HOME'       // Nom exact dans Jenkins
-        maven 'M2_Home'       // Nom exact dans Jenkins
+        jdk 'JAVA_HOME'
+        maven 'M2_Home'
     }
 
     environment {
@@ -11,12 +11,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/nesrinesamali/TP-Projet.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean install'
