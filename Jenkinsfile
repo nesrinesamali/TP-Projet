@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         jdk 'JAVA_HOME'
-        maven 'M2_Home'
+        maven 'M2_Home'   // le nom exact défini dans Jenkins
     }
 
     environment {
